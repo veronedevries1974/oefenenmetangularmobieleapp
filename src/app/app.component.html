@@ -1,0 +1,33 @@
+<!--<body>
+<app-camping-invoer (campingCreate)="onCampingCreated($event)"></app-camping-invoer> 
+<app-camping [campingList]="campings"></app-camping>
+<br><br>
+<app-camping-registratie (campingRegistratieCreate)="onCampingRegistratieCreated($event)"></app-camping-registratie> 
+<app-camping [campingRegistratieList]="registratie"></app-camping>
+<app-child (uitvoerCreate)="onChildInvoerCreated($event)"></app-child>
+<app-parent [invoerWaarde]="invoer"></app-parent>
+<a routerLink="/">Parent</a> | <a routerLink="/child">Child</a> 
+<router-outlet></router-outlet> 
+</body> -->
+
+<div class="page_framework" style="background-color: #d4fefd; width: 100%; min-height: 100vh;"> 
+  
+  <!-- De navigatiebalk met geforceerde styling -->
+  <nav style="background-color: #73ca73; display: block; width: 100%; margin: 0; padding: 0;">
+    <ul style="list-style: none !important; margin: 0; padding: 0; display: flex; flex-direction: row;">
+      <li style="padding: 15px 20px;">
+        <a routerLink="/" style="text-decoration: none !important; color: #333; font-family: Verdana; font-weight: bold;">Home</a>
+      </li>
+      <li style="padding: 15px 20px;">
+        <a routerLink="/child" style="text-decoration: none !important; color: #333; font-family: Verdana; font-weight: bold;">Geselecteerde campings</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div style="padding: 20px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!--inline styling (direct in de HTML) is vaak de meest zekere manier om 
+hardnekkige standaardinstellingen van frameworks zoals Ionic te overschrijven.-->
